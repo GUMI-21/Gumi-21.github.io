@@ -152,7 +152,7 @@
     <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Gumi-Termainl"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gumi-Termainl"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="工具命令记录 | Gumi-Termainl"><meta property="og:site_name" content="Gumi-Termainl"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/03/17/%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/"><meta property="og:locale" content="zh-CN"><meta name="description" content="长期更新，记录常用的工具命令。目前包括：SQL、VIM、GIT、GO、爬虫的一些语法   SQL查找一个字段的所有不同值：使用 group by VIM粘贴模式 set paste 显示行号 set number 取消行号 set nonumber 删除包含某个字符串的行 :g&#x2F;str&#x2F;d 搜索 &#x2F;str n 下一个, N 上一个 去掉包含重复的行 sort :g&#x2F;^\(.\+\)$\n\1&#x2F;d  - Gumi - Gumi-Termainl"><meta name="keywords" content="工具"><meta property="article:published_time" content="2022-03-17T10:28:48.000Z"><meta property="article:modified_time" content="2022-03-22T07:37:15.662Z"><meta property="og:updated_time" content="2022-03-22T07:37:15.662Z"><meta property="article:author" content="Gumi"><meta property="article:tag" content="工具"><meta name="twitter:card" content="summary">
+    <meta property="og:title" content="工具命令记录 | Gumi-Termainl"><meta property="og:site_name" content="Gumi-Termainl"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2022/03/17/%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/"><meta property="og:locale" content="zh-CN"><meta name="description" content="长期更新，记录常用的工具命令。目前包括：SQL、VIM、GIT、GO、爬虫的一些语法   SQL查找一个字段的所有不同值：使用 group by VIM粘贴模式 set paste 显示行号 set number 取消行号 set nonumber 删除包含某个字符串的行 :g&#x2F;str&#x2F;d 搜索 &#x2F;str n 下一个, N 上一个 去掉包含重复的行 sort :g&#x2F;^\(.\+\)$\n\1&#x2F;d  - Gumi - Gumi-Termainl"><meta name="keywords" content="工具"><meta property="article:published_time" content="2022-03-17T10:28:48.000Z"><meta property="article:modified_time" content="2022-03-28T06:05:29.553Z"><meta property="og:updated_time" content="2022-03-28T06:05:29.553Z"><meta property="article:author" content="Gumi"><meta property="article:tag" content="工具"><meta name="twitter:card" content="summary">
 
     
 
@@ -193,7 +193,7 @@
     },
     
     "datePublished": "2022-03-17T10:28:48.000Z",
-    "dateModified": "2022-03-22T07:37:15.662Z",
+    "dateModified": "2022-03-28T06:05:29.553Z",
     "author": {
         "@type": "Person",
         "name": "Gumi",
@@ -444,6 +444,13 @@
 </ul>
 <p>查看分支 <code>git branch (&lt;-参数-&gt;)</code>  <code>-r</code>查看远程分支，没有参数查看本地分支。</p>
 <p>删除分支 <code>git branch -d</code></p>
+<ul>
+<li>放弃本地修改</li>
+</ul>
+<p>1.未使用git add缓存代码时：<code>git checkou -- filepathname</code> 放弃所有：<code>git checkout .</code></p>
+<p>2.已经使用git add缓存代码了: <code>git reset HEAD filepatch name</code> 放弃所有：<code>git reset HEAD .</code>使用此命令后修改的内容进入1状态</p>
+<p>3.已经使用git commit提交了代码 <code>git reset --hard HEAD^</code>退回到上一次commit的状态，退回到任一版本：<code>git reset --hard commited</code></p>
+<p>使用<code>git log</code>可以查看git的提交历史</p>
 <h3 id="GO"><a href="#GO" class="headerlink" title="GO"></a>GO</h3><ul>
 <li>格式化占位符</li>
 </ul>
@@ -460,7 +467,7 @@
     <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
     <script>
     (function() {
-        var dateUpdate = Date.parse("2022-03-22");
+        var dateUpdate = Date.parse("2022-03-28");
         var nowDate = new Date();
         var a = nowDate.getTime();
         var b = a - dateUpdate;
@@ -476,7 +483,7 @@
 
 <p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2022-03-17T10:28:48.000Z" itemprop="datePublished">2022-03-17</time>
 
-    , 最后修改于&nbsp;<time datetime="2022-03-22T07:37:15.662Z" itemprop="dateModified">2022-03-22</time>
+    , 最后修改于&nbsp;<time datetime="2022-03-28T06:05:29.553Z" itemprop="dateModified">2022-03-28</time>
 
 </p>
 <p class="post-footer-info mb-0 pt-2">
